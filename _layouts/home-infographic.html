@@ -4,11 +4,14 @@ layout: page
 ---
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 <div class="row">
+  <div class="col-12">
+    {% include index/featured-terms.html field="surname" title="Families" btn-color="primary" max=200 %}
+
+  </div>
   <div class="col-md-8">
 
     {% include index/description.html %}
     
-    {% include index/featured-terms.html field="surname" title="Families" btn-color="primary" max=200 %}
 
     {% include index/carousel.html title="Sample Items" %}
     
